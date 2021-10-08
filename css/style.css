@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 html,
 body{
@@ -48,8 +49,8 @@ header{
 }
 .header-partners img{
     position: relative;
-    width: 8%;
-    height: 8%;
+    width: 10%;
+    height: 10%;
     z-index: 5;
 }
 .header-partners img:hover ~ p{
@@ -61,6 +62,7 @@ header{
     width: 30px;
     height: 30px;
     position: relative;
+    overflow: hidden;
 }
 .burger div{
     width: 100%;
@@ -84,18 +86,20 @@ header{
 /* Попан */
 .popit{
     width: 100%;
-    height: 89.8%;
+    height: 89.9%;
     position: absolute;
+    font-family: fantasy;
     top: 10.2%;
     left: 0;
     right: 0;
     bottom: 0%;
-    background-color: burlywood;
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0.8;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: -1;
+    overflow: hidden;
 }
 .popit ul{
     height: 60%;
@@ -107,12 +111,64 @@ header{
 }
 .popit a{
     text-decoration: none;
-    color: black;
+    color: white;
     text-align: center;
+    font-size: 1.5rem;
 }
 .popOn{
     z-index: 6;
 }
 
 
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* Слайдер промо */
+.slider__promo{
+    height: 90%;
+    width: 500%;
+    display: flex;
+    align-items: center;
+}
+.slider__window{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    animation: slider 10s infinite;
+}
+.slides{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+@keyframes slider {
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    20%{
+        transform: translateX(-20%);
+        opacity: 1;
+    }
+    40%{
+        transform: translateX(-40%);
+        opacity: 1;
+    }
+    60%{
+        transform: translateX(-60%);
+        opacity: 1;
+    }
+    80%{
+        transform: translateX(-80%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 0;
+    }
+}
 /* -------------------------------------- */
